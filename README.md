@@ -11,6 +11,7 @@ This is a Snake Game from the period of Black and White Screen Nokia.
 * Use Arrow keys to navigate the menu and manipulate the snake, Enter to select menu.
 * Uses ncurses library for graphics in pure ASCII.
 * Compile with make.
+* Run with make run.
 
 **Author**
 Shubham Chaudhary
