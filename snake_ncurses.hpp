@@ -1,3 +1,6 @@
+#ifndef SNAKE_NCURSES_HPP
+#define SNAKE_NCURSES_HPP
+
 #define MAX_ROW 18
 #define MAX_COL 79
 #define DEF_LEN_FUN 25
@@ -45,3 +48,5 @@ int getrow(int);
 int getcol(int);
 int diff(int, int);
 int classic_game(void);
+
+#endif

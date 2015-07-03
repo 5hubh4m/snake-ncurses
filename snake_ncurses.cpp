@@ -1,3 +1,14 @@
+#include <queue>
+#include <cstdlib>
+#include <ncurses.h>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+
+#include "snake_ncurses.hpp"
+#include "snake.hpp"
+#include "score.hpp"
+
 void print_snake(void) {
 	mvprintw(0, 14, " $$$$$$\\  $$\\   $$\\  $$$$$$\\  $$\\   $$\\ $$$$$$$$\\\n");
 	mvprintw(1, 14, "$$  __$$\\ $$$\\  $$ |$$  __$$\\ $$ | $$  |$$  _____|\n");
@@ -206,9 +217,10 @@ void fun_snake_game(void) {
 
 Point rand_point(std::deque<Cell> cells) {
 	Point p;
-	int flag=0;
+	int flag;
 	srand(time(NULL));
 	do {
+		flag=0;
 		p.row=rand()%(MAX_ROW+1);
 		p.col=rand()%(MAX_COL+1);
 		for(std::deque<Cell>::iterator it=cells.begin(); it!=cells.end(); ++it){

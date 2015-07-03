@@ -10,7 +10,7 @@ This is a Snake Game from the period of Black and White Screen Nokia.
 **Notes**
 * Use Arrow keys to navigate the menu and manipulate the snake, Enter to select menu.
 * Uses ncurses library for graphics in pure ASCII.
-* Compile with “g++ main.cpp -lncurses -o Snake”.
+* Compile with make.
 
 **Author**
 Shubham Chaudhary

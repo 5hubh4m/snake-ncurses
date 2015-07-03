@@ -1,7 +1,15 @@
-#include "snake_header.hpp"
+#include <queue>
+#include <cstdlib>
+#include <ncurses.h>
+#include <ctime>
+#include <fstream>
+#include <iostream>
+
+#include "snake_ncurses.hpp"
+#include "snake.hpp"
+#include "score.hpp"
 
 int main(void) {
-	int temp;
 	Score S;
 	S.fileread();
 	int ch;
