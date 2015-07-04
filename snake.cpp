@@ -34,9 +34,6 @@ void Snake::createNode(int d) {
 	}
 
 void Snake::render(void) {
-		int row, col;
-		row=cells.front().p.row;
-		col=cells.front().p.col;
 		erase();
 		for(std::deque<Cell>::iterator it=cells.begin(); it!=cells.end(); ++it){
 			mvaddch(it->p.row, it->p.col, it->c);
@@ -140,9 +137,6 @@ void Classic_Snake::movesnake(void) {
 }
 
 void Classic_Snake::render(void) {
-	int row, col;
-	row=cells.front().p.row;
-	col=cells.front().p.col;
 	erase();
 	for(std::deque<Cell>::iterator it=cells.begin(); it!=cells.end(); ++it){
 		mvaddch(it->p.row, it->p.col, it->c);
