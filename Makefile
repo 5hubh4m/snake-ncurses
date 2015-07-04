@@ -1,7 +1,8 @@
-CC = g++
-CFLAGS = -Wall -std=c++11
-#INCLUDES =
-#LFLAGS =
+CC = gcc
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
+INCLUDES =
+LFLAGS =
 LIBS = -lncurses
 SRCS = main.cpp snake.cpp score.cpp snake_ncurses.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -13,10 +14,10 @@ all : $(MAIN)
 	@echo snake_ncurses compiled and linked
 
 $(MAIN) : $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
 
-c.o :
-	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
+%o : %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean :
 	$(RM) *.o *~ $(MAIN) *db
