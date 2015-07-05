@@ -14,6 +14,7 @@ This is a Snake Game from the period of Black and White Screen Nokia.
 * Run with make run.
 
 **Author**
+
 Shubham Chaudhary
 
 Cheers!
